@@ -15,6 +15,41 @@ class Dropdown extends Component {
     };
   }
 
+  /*
+
+  static getDerivedStateFromProps(nextProps) {
+    const { list, title } = nextProps;
+    const selectedItem = list.filter((item) => item.selected);
+
+    if (selectedItem.length) {
+      return {
+        headerTitle: selectedItem[0].title,
+      };
+    }
+    return { headerTitle: title };
+  }
+
+*/
+
+  static getDerivedStateFromProps(nextProps) {
+    const { list, title, name } = nextProps;
+    console.log("nextProps", nextProps);
+    const selectedItem = list.filter((item) => item.selected);
+
+    const count = list.filter((item) => item.selected).length;
+
+    if (count === 0) {
+      return { headerTitle: title };
+    }
+    if (count === 1) {
+      return { headerTitle: selectedItem[0].title };
+    }
+    if (count > 1) {
+      return { headerTitle: `${count} ${name}s` };
+    }
+    return null;
+  }
+
   selectItem = (item) => {
     const { toggleItem } = this.props;
     const { title, id, key } = item;
