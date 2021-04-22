@@ -15,6 +15,18 @@ class Dropdown extends Component {
     };
   }
 
+  componentDidUpdate() {
+    const { isListOpen } = this.state;
+
+    setTimeout(() => {
+      if (isListOpen) {
+        window.addEventListener("click", this.close);
+      } else {
+        window.removeEventListener("click", this.close);
+      }
+    }, 0);
+  }
+
   /*
 
   static getDerivedStateFromProps(nextProps) {
@@ -49,6 +61,12 @@ class Dropdown extends Component {
     }
     return null;
   }
+
+  close = () => {
+    this.setState({
+      isListOpen: false,
+    });
+  };
 
   selectItem = (item) => {
     const { toggleItem } = this.props;
@@ -90,7 +108,10 @@ class Dropdown extends Component {
                 type="button"
                 className="dd-list-item"
                 key={item.id}
-                onClick={() => toggleItem(item.id, item.key)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  toggleItem(item.id, item.key);
+                }}
               >
                 {item.title} {item.selected && <FontAwesome name="check" />}
               </button>

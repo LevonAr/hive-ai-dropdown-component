@@ -32,7 +32,7 @@ class App extends Component {
         },
         {
           id: 4,
-          title: "Izmir",
+          title: "Shushi",
           selected: false,
           key: "location",
         },
