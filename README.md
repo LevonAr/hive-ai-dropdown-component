@@ -6,21 +6,21 @@ This repo is a dropdown component I developed for hive.ai
 
 ## Clone
 
-Clone this repository on your local machine
+## `git clone https://github.com/LevonAr/hive-ai-dropdown-component.git`
 
-### `git clone https://github.com/LevonAr/hive-ai-dropdown-component.git`
+## `cd hive-ai-dropdown-component`
 
-### `cd hive-ai-dropdown-component`
+Clone this repository on your local machine. Then navigate into it.
 
 ## Install Dependencies
 
-I built this component from scratch. The only dependency I'm using is Font Awesome.
+## `npm install`
 
-### `npm install`
+I built this component from scratch. The only dependency I'm using is Font Awesome.
 
 ## Run App
 
-### `npm start`
+## `npm start`
 
 This will run the app in development mode.
 
