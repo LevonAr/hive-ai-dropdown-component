@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // Dropdown component I built froms scratch
 import Dropdown from "./components/Dropdown";
-// Data that populates dropdown menu.
+// Data sets that populate dropdown menu.
 import { InputData } from "./input/InputData";
 import { LargeInputData } from "./input/LargeInputData";
 import "./App.css";
@@ -10,6 +10,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      // Change the line directely below this to "items: LargeInputData," if you would like to load larger data set
       items: InputData,
     };
   }
