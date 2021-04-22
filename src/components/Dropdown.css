@@ -8,7 +8,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  border: 1px solid #dfdfdf;
+  border: 1px solid #047be8;
   background-color: white;
   border-radius: 3px;
   line-height: 38px;
@@ -20,25 +20,22 @@
   align-items: center;
   margin-right: 20px;
   overflow: auto;
+  color: #047be8;
 }
 
 .dd-header-title {
   margin: 2px 20px;
   font-size: larger;
+  font-weight: lighter;
   margin-left: 20px;
   overflow: auto;
   font-family: Nunito Sans, sans-serif;
+  color: #047be8;
 }
 
 .dd-list {
   z-index: 10;
-  border: 1px solid #dfdfdf;
-  border-top: none;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
   background-color: white;
-  text-align: left;
-  box-shadow: 0 2px 5px -1px #e8e8e8;
 }
 
 .dd-scroll-container {
@@ -48,7 +45,7 @@
   padding: 15px 0;
   z-index: 10;
   max-height: 215px;
-  border: 1px solid #dfdfdf;
+  border: 1px solid #047be8;
   border-top: none;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
@@ -65,9 +62,16 @@
   width: 100%;
   padding: 8px 10px;
   font-size: medium;
-  line-height: 1.2rem;
+  line-height: 1 rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   background-color: white;
   border: none;
+  font-weight: bold;
+  color: #047be8;
+}
+
+.dd-list-item:hover {
+  background-color: rgb(74, 144, 226);
+  color: white;
 }
