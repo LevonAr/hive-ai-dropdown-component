@@ -1,6 +1,9 @@
 import React, { Component } from "react";
+// Dropdown component I built froms scratch
 import Dropdown from "./components/Dropdown";
+// Data that populates dropdown menu.
 import { InputData } from "./input/InputData";
+import { LargeInputData } from "./input/LargeInputData";
 import "./App.css";
 
 class App extends Component {
