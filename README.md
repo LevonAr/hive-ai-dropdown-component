@@ -33,7 +33,7 @@ I decided to modularize my code in order to accept a list of data as an input.
 
 This list is then fed into my component, which generates dropdown display options using props as specified.
 
-I included 2 sample inputs. They are located in the following path:
+I included 2 sample inputs. They are located in the following:
 
 /src/input/InputData
 
@@ -54,3 +54,7 @@ to:
 ```javascript
       items: LargeInputData,
 ```
+
+Then save changes and restart the app using
+
+#### `npm start`
