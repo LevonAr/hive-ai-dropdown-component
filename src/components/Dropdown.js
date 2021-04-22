@@ -16,7 +16,7 @@ class Dropdown extends Component {
   }
 
   selectItem = (item) => {
-    const { resetThenSet } = this.props;
+    const { toggleItem } = this.props;
     const { title, id, key } = item;
 
     this.setState(
@@ -24,7 +24,7 @@ class Dropdown extends Component {
         headerTitle: title,
         isListOpen: false,
       },
-      () => resetThenSet(id, key)
+      () => toggleItem(id, key)
     );
   };
 
@@ -36,7 +36,7 @@ class Dropdown extends Component {
 
   render() {
     const { isListOpen, headerTitle } = this.state;
-    const { list } = this.props;
+    const { list, toggleItem } = this.props;
 
     return (
       <div className="dd-wrapper">
@@ -55,7 +55,7 @@ class Dropdown extends Component {
                 type="button"
                 className="dd-list-item"
                 key={item.id}
-                onClick={() => this.selectItem(item)}
+                onClick={() => toggleItem(item.id, item.key)}
               >
                 {item.title} {item.selected && <FontAwesome name="check" />}
               </button>

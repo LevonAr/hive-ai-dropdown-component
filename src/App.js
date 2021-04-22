@@ -69,6 +69,16 @@ class App extends Component {
     console.log(item, name);
   };
 
+  toggleItem = (id, key) => {
+    const temp = [...this.state["locations"]];
+
+    temp[id].selected = !temp[id].selected;
+
+    this.setState({
+      [key]: temp,
+    });
+  };
+
   render() {
     const { locations } = this.state;
 
@@ -84,6 +94,7 @@ class App extends Component {
             title="Select location"
             list={locations}
             onChange={this.onChange}
+            toggleItem={this.toggleItem}
           />
         </div>
 
