@@ -16,6 +16,7 @@ class Dropdown extends Component {
     };
   }
 
+  // closes Dropdown menu when clicked off
   componentDidUpdate() {
     const { isListOpen } = this.state;
 
@@ -28,22 +29,10 @@ class Dropdown extends Component {
     }, 0);
   }
 
-  /*
-
-  static getDerivedStateFromProps(nextProps) {
-    const { list, title } = nextProps;
-    const selectedItem = list.filter((item) => item.selected);
-
-    if (selectedItem.length) {
-      return {
-        headerTitle: selectedItem[0].title,
-      };
-    }
-    return { headerTitle: title };
-  }
-
-*/
-
+  // hook that returns selected items value in order to render it in the header.
+  // decided to limit names of items in order to reduce clutter in header, thus
+  // if one item selected : header shows selected item name
+  // if multiple items : header shows number of items selected
   static getDerivedStateFromProps(nextProps) {
     const { list, title, name } = nextProps;
     console.log("nextProps", nextProps);
@@ -63,25 +52,14 @@ class Dropdown extends Component {
     return null;
   }
 
+  // closes dropdown menu when clicked off helper function
   close = () => {
     this.setState({
       isListOpen: false,
     });
   };
 
-  selectItem = (item) => {
-    const { toggleItem } = this.props;
-    const { title, id, key } = item;
-
-    this.setState(
-      {
-        headerTitle: title,
-        isListOpen: false,
-      },
-      () => toggleItem(id, key)
-    );
-  };
-
+  // opens and closes dropdown menu
   toggleList = () => {
     this.setState((prevState) => ({
       isListOpen: !prevState.isListOpen,

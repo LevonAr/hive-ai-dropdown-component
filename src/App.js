@@ -1,112 +1,17 @@
 import React, { Component } from "react";
 import Dropdown from "./components/Dropdown";
+import { InputData } from "./input/InputData";
 import "./App.css";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      locations: [
-        {
-          id: 0,
-          title: "New York",
-          selected: false,
-          key: "location",
-        },
-        {
-          id: 1,
-          title: "Dublin",
-          selected: false,
-          key: "location",
-        },
-        {
-          id: 2,
-          title: "California",
-          selected: false,
-          key: "location",
-        },
-        {
-          id: 3,
-          title: "Yerevan",
-          selected: false,
-          key: "location",
-        },
-        {
-          id: 4,
-          title: "Shushi",
-          selected: false,
-          key: "location",
-        },
-        {
-          id: 5,
-          title: "Oslo",
-          selected: false,
-          key: "location",
-        },
-        {
-          id: 4,
-          title: "Shushi",
-          selected: false,
-          key: "location",
-        },
-        {
-          id: 5,
-          title: "Oslo",
-          selected: false,
-          key: "location",
-        },
-        {
-          id: 4,
-          title: "Shushi",
-          selected: false,
-          key: "location",
-        },
-        {
-          id: 5,
-          title: "Oslo",
-          selected: false,
-          key: "location",
-        },
-        {
-          id: 4,
-          title: "Shushi",
-          selected: false,
-          key: "location",
-        },
-        {
-          id: 5,
-          title: "Oslo",
-          selected: false,
-          key: "location",
-        },
-        {
-          id: 4,
-          title: "Shushi",
-          selected: false,
-          key: "location",
-        },
-        {
-          id: 5,
-          title: "Oslo",
-          selected: false,
-          key: "location",
-        },
-        {
-          id: 4,
-          title: "Shushi",
-          selected: false,
-          key: "location",
-        },
-        {
-          id: 5,
-          title: "Oslo",
-          selected: false,
-          key: "location",
-        },
-      ],
+      items: InputData,
     };
   }
 
+  // helper functions for Dropdown to be accessed with arrow keys and tab keys
   componentDidMount() {
     window.addEventListener("keydown", this.tabKeyPressed);
     window.addEventListener("mousedown", this.mouseClicked);
@@ -126,31 +31,25 @@ class App extends Component {
     window.addEventListener("keydown", this.tabKeyPressed);
   };
 
-  onChange = (item, name) => {
-    console.log(item, name);
-  };
-
+  // this functions allows parent component (this file) to have it's state set from within child (Dropdown) according to selected item
   toggleItem = (id, key) => {
-    const temp = [...this.state["locations"]];
-
+    const temp = [...this.state["items"]];
     temp[id].selected = !temp[id].selected;
-
     this.setState({
       [key]: temp,
     });
   };
 
   render() {
-    const { locations } = this.state;
+    const { items } = this.state;
 
     return (
       <div className="App">
         <h3>Dropdown Demo</h3>
         <Dropdown
-          name="location"
+          name="Item"
           title="Select"
-          list={locations}
-          onChange={this.onChange}
+          list={items}
           toggleItem={this.toggleItem}
         />
       </div>
