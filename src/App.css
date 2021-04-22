@@ -4,3 +4,9 @@
   flex-direction: column;
   margin-top: 150px;
 }
+
+h3 {
+  width: 300px;
+  margin: 0 auto;
+  padding: 15px;
+}

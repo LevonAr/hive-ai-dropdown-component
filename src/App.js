@@ -43,6 +43,66 @@ class App extends Component {
           selected: false,
           key: "location",
         },
+        {
+          id: 4,
+          title: "Shushi",
+          selected: false,
+          key: "location",
+        },
+        {
+          id: 5,
+          title: "Oslo",
+          selected: false,
+          key: "location",
+        },
+        {
+          id: 4,
+          title: "Shushi",
+          selected: false,
+          key: "location",
+        },
+        {
+          id: 5,
+          title: "Oslo",
+          selected: false,
+          key: "location",
+        },
+        {
+          id: 4,
+          title: "Shushi",
+          selected: false,
+          key: "location",
+        },
+        {
+          id: 5,
+          title: "Oslo",
+          selected: false,
+          key: "location",
+        },
+        {
+          id: 4,
+          title: "Shushi",
+          selected: false,
+          key: "location",
+        },
+        {
+          id: 5,
+          title: "Oslo",
+          selected: false,
+          key: "location",
+        },
+        {
+          id: 4,
+          title: "Shushi",
+          selected: false,
+          key: "location",
+        },
+        {
+          id: 5,
+          title: "Oslo",
+          selected: false,
+          key: "location",
+        },
       ],
     };
   }
@@ -88,7 +148,7 @@ class App extends Component {
         <h3>Dropdown Demo</h3>
         <Dropdown
           name="location"
-          title="Select location"
+          title="Select"
           list={locations}
           onChange={this.onChange}
           toggleItem={this.toggleItem}

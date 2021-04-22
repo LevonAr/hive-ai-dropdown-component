@@ -1,8 +1,7 @@
 /* center parent Dropdown container responsive */
 .dd-wrapper {
-  width: 15%;
+  width: 300px;
   margin: 0 auto;
-  font-size: 2 rem;
 }
 
 .dd-header-container {
@@ -20,24 +19,24 @@
   display: flex;
   align-items: center;
   margin-right: 20px;
+  overflow: auto;
 }
 
 .dd-header-title {
   margin: 2px 20px;
   font-size: larger;
   margin-left: 20px;
+  overflow: auto;
+  font-family: Nunito Sans, sans-serif;
 }
 
 .dd-list {
   z-index: 10;
-  width: 100%;
-  max-height: 215px;
   border: 1px solid #dfdfdf;
   border-top: none;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   background-color: white;
-  font-weight: 700;
   text-align: left;
   box-shadow: 0 2px 5px -1px #e8e8e8;
 }
@@ -48,7 +47,6 @@
   background-color: white;
   padding: 15px 0;
   z-index: 10;
-  width: 100%;
   max-height: 215px;
   border: 1px solid #dfdfdf;
   border-top: none;
@@ -57,7 +55,6 @@
   -webkit-box-shadow: 0 2px 5px -1px #e8e8e8;
   box-shadow: 0 2px 5px -1px #e8e8e8;
   background-color: white;
-  font-weight: 700;
   text-align: left;
 }
 
@@ -67,8 +64,8 @@
   overflow: hidden;
   width: 100%;
   padding: 8px 10px;
-  font-size: large;
-  line-height: 1.6rem;
+  font-size: medium;
+  line-height: 1.2rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   background-color: white;
