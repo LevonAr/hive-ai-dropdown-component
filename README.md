@@ -6,21 +6,21 @@ This repo is a dropdown component I developed for hive.ai
 
 ## Clone
 
-## `git clone https://github.com/LevonAr/hive-ai-dropdown-component.git`
+#### `git clone https://github.com/LevonAr/hive-ai-dropdown-component.git`
 
-## `cd hive-ai-dropdown-component`
+#### `cd hive-ai-dropdown-component`
 
 Clone this repository on your local machine. Then navigate into it.
 
 ## Install Dependencies
 
-## `npm install`
+#### `npm install`
 
 I built this component from scratch. The only dependency I'm using is Font Awesome.
 
 ## Run App
 
-## `npm start`
+#### `npm start`
 
 This will run the app in development mode.
 
@@ -33,7 +33,7 @@ I decided to modularize my code in order to accept a list of data as an input.
 
 This list is then fed into my component, which generates dropdown display options using props as specified.
 
-I included 2 sample inputs. They are located in the following:
+I included 2 sample inputs. They are located in the following path:
 
 /src/input/InputData
 
