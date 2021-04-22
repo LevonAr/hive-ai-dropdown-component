@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Dropdown from "./components/Dropdown";
+import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -84,31 +85,14 @@ class App extends Component {
 
     return (
       <div className="App">
-        <p>Dropdown menu examples</p>
-
-        <h3>Regular</h3>
-
-        <div className="wrapper">
-          <Dropdown
-            name="location"
-            title="Select location"
-            list={locations}
-            onChange={this.onChange}
-            toggleItem={this.toggleItem}
-          />
-        </div>
-
-        <h3>Searchable</h3>
-
-        <div className="wrapper">
-          <Dropdown
-            name="location"
-            searchable={["Search for location", "No matching location"]}
-            title="Select location"
-            list={locations}
-            onChange={this.onChange}
-          />
-        </div>
+        <h3>Dropdown Demo</h3>
+        <Dropdown
+          name="location"
+          title="Select location"
+          list={locations}
+          onChange={this.onChange}
+          toggleItem={this.toggleItem}
+        />
       </div>
     );
   }

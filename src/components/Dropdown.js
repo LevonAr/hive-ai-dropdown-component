@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import FontAwesome from "react-fontawesome";
+import "./Dropdown.css";
 
 class Dropdown extends Component {
   constructor(props) {
@@ -93,29 +94,37 @@ class Dropdown extends Component {
 
     return (
       <div className="dd-wrapper">
-        <button type="button" className="dd-header" onClick={this.toggleList}>
+        <button
+          type="button"
+          className="dd-header-container"
+          onClick={this.toggleList}
+        >
           <div className="dd-header-title">{headerTitle}</div>
-          {isListOpen ? (
-            <FontAwesome name="angle-up" size="2x" />
-          ) : (
-            <FontAwesome name="angle-down" size="2x" />
-          )}
+          <div className="dd-toggle-icon">
+            {isListOpen ? (
+              <FontAwesome name="angle-up" size="2x" />
+            ) : (
+              <FontAwesome name="angle-down" size="2x" />
+            )}
+          </div>
         </button>
         {isListOpen && (
           <div role="list" className="dd-list">
-            {list.map((item) => (
-              <button
-                type="button"
-                className="dd-list-item"
-                key={item.id}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  toggleItem(item.id, item.key);
-                }}
-              >
-                {item.title} {item.selected && <FontAwesome name="check" />}
-              </button>
-            ))}
+            <div className="dd-scroll-container">
+              {list.map((item) => (
+                <button
+                  type="button"
+                  className="dd-list-item"
+                  key={item.id}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleItem(item.id, item.key);
+                  }}
+                >
+                  {item.title} {item.selected && <FontAwesome name="check" />}
+                </button>
+              ))}
+            </div>
           </div>
         )}
       </div>
