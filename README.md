@@ -1,6 +1,6 @@
 # Dropdown Component Overview
 
-This repo is a dropdown component I developed for hive.ai
+This repo is a dropdown component I developed for [HIVE AI](https://thehive.ai/)
 
 # Getting Started
 
